@@ -1,7 +1,8 @@
 # asd-project-reservasi-kelompok2
 Project UTS Algoritma dan Struktur Data | 3C Kelompok 2 
 
-=============================================================
+============================================================
+
 Nama Anggota Kelompok 
 Kelompok 2
 1. Panji Eka Saputra (25083000020) | @pnjiekaa
