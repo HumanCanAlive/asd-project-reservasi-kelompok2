@@ -4,7 +4,7 @@ Project UTS Algoritma dan Struktur Data | 3C Kelompok 2
 ============================================================
 
 Nama Anggota Kelompok 
-Kelompok 2
+Kelompok 2 Algoritma
 1. Panji Eka Saputra (25083000020) | @pnjiekaa
 2. Yoses Tri Ananda Jodi (25083000024) | @sheesh-yo
 3. Gemilang Jelang Lailattulqadr (25083000025) | @HumanCanAlive
