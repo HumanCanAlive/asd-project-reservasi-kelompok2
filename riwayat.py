@@ -67,3 +67,47 @@ def catat_riwayat(
 
     return data
 
+def tampilkan_riwayat(data_riwayat):
+    """
+    Menampilkan seluruh riwayat reservasi dari Linked List
+    secara berurutan (dari yang paling awal dicatat).
+
+    Mengembalikan jumlah data yang ditampilkan, supaya bisa
+    dipakai fitur berikutnya (misalnya untuk validasi/statistik).
+    """
+
+    if data_riwayat.is_empty():
+        print("Belum ada riwayat reservasi.")
+        return 0
+
+    garis = "=" * 110
+    print(garis)
+    print(
+        f"{'No':<4}{'Waktu':<21}{'Aksi':<12}{'Kode':<10}"
+        f"{'Nama Pemesan':<20}{'Nilai Lama':<20}{'Nilai Baru':<20}"
+    )
+    print(garis)
+
+    jumlah = 0
+    current = data_riwayat.head
+
+    while current is not None:
+        data = current.data
+
+        print(
+            f"{data['no_urut']:<4}"
+            f"{data['waktu']:<21}"
+            f"{data['aksi']:<12}"
+            f"{data['kode_reservasi']:<10}"
+            f"{data['nama_pemesan']:<20}"
+            f"{str(data['nilai_lama']):<20}"
+            f"{str(data['nilai_baru']):<20}"
+        )
+
+        jumlah += 1
+        current = current.next
+
+    print(garis)
+    print(f"Total riwayat: {jumlah}")
+
+    return jumlah
