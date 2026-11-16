@@ -1,7 +1,8 @@
 from calendar import monthrange
 from datetime import date
+from riwayat import catat_riwayat
 
-def tambah_reservasi(data_reservasi):
+def tambah_reservasi(data_reservasi, data_riwayat):
 	# Validasi ID: memastikan tidak kosong dan belum digunakan.
 	while True:
 		kode = input("Masukkan ID/kode reservasi: ").strip()
@@ -106,7 +107,6 @@ def tambah_reservasi(data_reservasi):
 
 	# Tampilkan pesan sukses.
 	print(f"Data reservasi untuk {nama} berhasil ditambahkan!")
-
 
 if __name__ == "__main__":
 	# Contoh pemanggilan fungsi.
