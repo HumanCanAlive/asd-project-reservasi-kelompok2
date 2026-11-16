@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -146,7 +145,6 @@ def cari_riwayat_reservasi(data_riwayat):
     if not ditemukan:
         print("Riwayat dengan kode tersebut tidak ditemukan.")
 
-    tampilkan_semua_riwayat(data_riwayat)
 
 
 def tampilkan_riwayat_terbaru(data_riwayat):
@@ -203,14 +201,3 @@ def tampilkan_riwayat_terbaru(data_riwayat):
     print(f"Total riwayat: {jumlah}")
 
     return jumlah
-
-from riwayat import (
-    LinkedList,
-    catat_riwayat,
-    tampilkan_riwayat_terbaru
-)
-
-data_riwayat = LinkedList()
-
-elif pilihan == "F6":
-tampilkan_riwayat_terbaru(data_riwayat)
