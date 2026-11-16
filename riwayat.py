@@ -111,3 +111,38 @@ def tampilkan_riwayat(data_riwayat):
     print(f"Total riwayat: {jumlah}")
 
     return jumlah
+
+def cari_riwayat_reservasi(data_riwayat):
+    if data_riwayat.is_empty():
+        print("Belum ada riwayat reservasi.")
+        return
+
+    kode_dicari = input("Masukkan kode reservasi: ").strip()
+
+    current = data_riwayat.head
+    ditemukan = False
+
+    print("\n=== HASIL PENCARIAN RIWAYAT ===")
+
+    while current is not None:
+        riwayat = current.data
+
+        if riwayat["kode_reservasi"] == kode_dicari:
+            print(f"No Urut       : {riwayat['no_urut']}")
+            print(f"Aksi          : {riwayat['aksi']}")
+            print(f"Kode Reservasi: {riwayat['kode_reservasi']}")
+            print(f"Nama Pemesan  : {riwayat['nama_pemesan']}")
+            print(f"Nilai Lama    : {riwayat['nilai_lama']}")
+            print(f"Nilai Baru    : {riwayat['nilai_baru']}")
+            print(f"Waktu         : {riwayat['waktu']}")
+            print("-----------------------------")
+
+            ditemukan = True
+
+        current = current.next
+
+    if not ditemukan:
+        print("Riwayat dengan kode tersebut tidak ditemukan.")
+
+    tampilkan_semua_riwayat(data_riwayat)
+    
